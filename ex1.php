@@ -36,15 +36,15 @@
     <form action="ex1.php" method="POST">
         <div class="field">
             <label for="">Hệ số a</label>
-            <input type="text" name="he1">
+            <input type="number" name="se1" placeholder="<?php echo isset($_POST['se1']) ? $_POST['se1'] : 0; ?>">
         </div>
         <div class="field">
             <label for="">Hẹ số b</label>
-            <input type="text" name="he2">
+            <input type="number" name="se2"  placeholder="<?php echo isset($_POST['se2']) ? $_POST['se2'] : 0; ?>">
         </div>
         <div class="field">
             <label for="">Kết quả</label>
-            <p class="kq"><?php echo(sum())?></p>
+            <p class="kq"><?php $j=(isset($_POST['se1']) ? $_POST['se1'] : 0); $k=(isset($_POST['se2']) ? $_POST['se2'] : 0); echo(sum1($j,$k));?></p>
         </div>
         <button type="submit">Xác nhận</button>
     </form>
@@ -58,7 +58,7 @@
             }
         }
         function sum1 ($hsa,$hsb){
-            return $hsa +$hsb;
+            return $hsa + $hsb;
         }
         
     ?>
